@@ -1,3 +1,7 @@
+# AutoPFX MIT license 2024
+# https://github.com/Canmi21/AutoPFX/
+# Copyright (C) Canmi(Canmi21), all right reserved.
+
 import os
 import subprocess
 import tkinter as tk
@@ -139,7 +143,7 @@ def list_exe_files(window, pfx_file):
                 if file.lower().endswith(".exe"):  # 忽略大小写
                     exe_files.append(os.path.join(root, file))
 
-    label = tk.Label(window, text="Found .exe files:", font=("Arial", 14))
+    label = tk.Label(window, text="Found .EXE files:", font=("Arial", 14))
     label.pack(pady=20)
 
     if not exe_files:
@@ -314,18 +318,18 @@ def create_pfx_menu(window):
 
 # 关于
 def show_about():
-    webbrowser.open("https://github.com/Canmi21/AutoPFX")
     messagebox.showinfo("About AutoPFX", """
     AutoPFX GUI 2024 X Github.com
     OpenSource Software MIT license.
     Copyright (C) Canmi(Canmi21), all right reserved.
     """)
+    webbrowser.open("https://github.com/Canmi21/AutoPFX")
 
 # 程序入口
 def main():
     window = tk.Tk()
-    window.title("AutoPFX Command Interface")
-    window.geometry("800x600")
+    window.title("AutoPFX OpenSource Software")
+    window.geometry("800x330")
 
     show_main_menu(window)
 
