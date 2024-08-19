@@ -1,0 +1,6 @@
+PowerShellScript: |
+  $cert = New-SelfSignedCertificate -Type CodeSigningCert -Subject "{pfx_subject}" -CertStoreLocation "Cert:\CurrentUser\My"
+  $certPath = Join-Path -Path $PSScriptRoot -ChildPath "{pfx_name}.pfx"
+  $certPassword = ConvertTo-SecureString -String "{pfx_password}" -Force -AsPlainText
+  Export-PfxCertificate -Cert $cert -FilePath $certPath -Password $certPassword
+  Write-Host "PFX certificate generated at: $certPath"
