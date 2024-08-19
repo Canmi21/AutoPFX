@@ -18,7 +18,7 @@ pip install ruamel.yaml
 
 您可以在 `PowerShell` 中使用 `certutil` 命令查询 `SHA256`
 ``` shell
-certutil -hashfile OpenJLC.EXE  SHA256
+certutil -hashfile AutoPFX.EXE  SHA256
 ```
 
 从终端中得到的执行结果应该像这样:
